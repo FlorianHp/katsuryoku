@@ -21,6 +21,10 @@ body {
   opacity: .95;
   z-index: 3;
 
+  a {
+    cursor: pointer;
+  }
+
   img {
     width: 200px;
     margin: 1rem;
@@ -35,6 +39,12 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: solid 3px var(--block-color);
   font-weight: bold;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .breadcrumbs {
@@ -51,12 +61,12 @@ body {
     color: black;
     width: 7rem;
     text-align: center;
-
-    &.--selected {
-      background-color: var(--background-color);
-      color: white;
-    }
   }
+}
+
+.--selected {
+  background-color: var(--background-color);
+  color: white;
 }
 
 .hero {
@@ -68,19 +78,36 @@ body {
 
 section {
   background-color: var(--section-color);
-  display: grid;
-  grid-template-columns: 40% 40%;
-  grid-gap: 2rem;
-  justify-content: center;
-  align-items: center;
   padding: 1.5rem;
-
+  
   img {
     margin: auto;
     border-radius: 15px;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
   }
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.welps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  img:hover {
+    transform: scale(1.4);
+    position: relative;
+    box-shadow: 0px 20px 15px -15px rgba(0,0,0,0.5);
+  }
+}
 
 #welcome{
   position: absolute;
@@ -90,7 +117,7 @@ section {
   color: white;
   border-radius: 15px;
   padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(121, 149, 127, 0.6);
 
   p {
     padding: 0 1rem;
@@ -100,6 +127,7 @@ section {
 h2 {
   justify-self: center;
   color: white;
+  position: relative;
 }
 
 .argument {
@@ -113,11 +141,17 @@ h2 {
 
 .text-box{
   background-color: var(--block-color);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 15px;
+  width: fit-content;
+  min-width: 402px;
   max-width: 600px;
   margin: auto;
   font-size: 1.2rem;
+}
+
+.--left {
+  margin-left: 5vw;
 }
 
 .breed {
@@ -129,7 +163,7 @@ h2 {
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: auto;
-  padding: 1.5rem 0 0 0;
+  padding: 2rem;
 
   div {
     display: grid;
@@ -146,18 +180,20 @@ h2 {
   }
 }
 
+#jump {
+  position: absolute;
+  top: -11rem;
+}
+
 #map {
-  margin-top: 2rem;
   width: 100vw;
+  border-radius: 0;
+  cursor: pointer;
 }
 
 #contact a img {
     display: block;
     margin: 0 auto;
-}
-
-iframe {
-  width: 100vw;
 }
 
 footer {
@@ -167,13 +203,14 @@ footer {
   div {
     display: inline-grid;
     grid-auto-flow: column;
-    grid-template-columns: auto 25% 25% 25%;
+    grid-template-columns: auto 50% 25%;
     grid-gap: 1rem;
     padding: 1.5rem;
 
     a {
       text-align: center;
       height: fit-content;
+      cursor: pointer;
     }
   }
 
@@ -181,6 +218,31 @@ footer {
     margin: 0 auto auto auto;
     padding-left: 3rem;
   }
+}
 
+button {
+  focus: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+}
+
+dialog[open] {
+  background: var(--block-color);
+  border: none;
+  border-radius: 15px;
+  width: 80vw;
+
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 50%);
 }
 

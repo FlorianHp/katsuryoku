@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/png">
-  <title>katsuryoku</title>
+  <script src="index.js" defer></script>
+  <title>Katsuryoku</title>
 </head>
 
 <body>
   <div id="header">
-    <img src="/assets/icons/logo.svg" alt="">
+    <a href="/"><img src="/assets/icons/logo.svg" alt=""></a>
 
     <div class="breadcrumbs">
       <a class="ghost-button --selected" href="/">Startseite</a> 
@@ -29,7 +30,7 @@
 
 
   <h2>Zucht</h2>
-  <section>
+  <section class="container">
     <div class="argument">
       <h2>Qualität</h2>
       <div class="text-box">
@@ -56,13 +57,13 @@
 
   </section>
 
-  <h2>Kontakt</h2>
+  <h2>Kontakt<span id="jump"></span></h2>
   <section id="contact">
     <div>
       <a href="/info.html">
         <img src="/assets/icons/phone_circle.svg" height="60" alt="">
       </a>
-      <p class="text-box">Wir stehen unseren Kunden jederzeit mit Rat zur Seite und begleiten sie auch nach dem Kauf eines Welpen. Anreise und Kontaktinformationen finden sie über den Reiter ,,Über uns”.</p>
+      <p class="text-box">Wir stehen unseren Kunden jederzeit mit Rat zur Seite und begleiten dich auch nach dem Kauf eines Welpen. Anreise und Kontaktinformationen findest du über den Reiter ,,Über uns”.</p>
     </div>
 
     <div>
@@ -76,22 +77,59 @@
       <a href="mailto:josy-2016@web.de">
         <img src="/assets/icons/email.svg" href="mailto:josy-2016@web.de" height="60" alt="">
       </a>
-      <p class="text-box">Auch per <a href="mailto:josy-2016@web.de">Email</a> können Sie uns gerne kontaktieren.</p>
-    </div>
-    <div>
-      <!-- preview for iFrame / google.maps API Key required -->
-      <img id="map" src="/assets/map.webp" width="100vw">
+      <p class="text-box">Auch per <a href="mailto:josy-2016@web.de">Email</a> kannst du uns gerne kontaktieren.</p>
     </div>
   </section>
+
+  <h2>Anfahrt</h2>
+  <div>
+    <!-- preview for iFrame / google.maps API Key required -->
+    <a href="https://www.google.de/maps/place/Br%C3%BCckenstra%C3%9Fe+8,+34369+Hofgeismar/@51.5416647,9.4032434,665m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47bb18df70e3c4b3:0xe551e91f6979d74f!8m2!3d51.5416647!4d9.4058183!16s%2Fg%2F11c244zfpy?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+      <img id="map" src="/assets/map.webp" width="100vw">
+    </a>
+  </div>
 
   <footer>
     <div>
       <span></span>
-      <a class="ghost-button">Impressum</a>
-      <a class="ghost-button">Datenschutz</a>
+      <a class="ghost-button" onclick="openModal(event)" >Impressum / Datenschut</a>
       <img src="/assets/icons/verein.webp" height="50">
     </div>
   </footer>
+
   
+  <dialog id="modal">
+    <h1>Impressum!</h1>
+    <p>
+      Mechthild Hopp
+      <br>
+      Brückenstrasse 8
+      <br>
+      34369 Hofgeismar
+      <br><br>
+       
+      
+      <h3>Kontaktinformationen</h3>
+      <br>
+      Email: josy-2016@web.de
+      <br>
+      Telefon: 0163 6648704
+      <br><br>
+       
+      
+      <h3>Haftung für Inhalte</h3>
+      <br>
+      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+      <br><br>
+       
+      
+      <h3>Haftung für Links</h3>
+      <br>
+      Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+    <form method="dialog">
+      <button class="ghost-button --selected">Schließen</button>
+    </form>
+  </dialog>
+
 </body>
 </html>

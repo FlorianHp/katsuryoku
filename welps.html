@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/png">
+  <script src="index.js" defer></script>
   <title>Katsuryoku</title>
 </head>
 <body>
@@ -18,15 +19,92 @@
       <a class="ghost-button" href="/info.html">Über uns</a>  
     </div>
   </div>
-  <H1>Welps!</H1>
+
+  <h2>C Wurf</h2>
+  <section>
+    <div class="text-box --left">
+      <p>Amelie wird voraussichtlich im März 2025 gedeckt. </p>
+    </div>
+    <!-- <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt=""> -->
+  </section>
+
+  <h2>B Wurf</h2>
+  <section >
+    <div class="text-box --left">
+      <p>Geboren am 03.04.2023
+        <br><br>
+        Mutter: Katsuryoku Amelie    
+        <br><br>
+        Vater: Tweet Chester´s Quantity Out Of
+      </p>
+    </div>
+    <div class="welps">
+      <img src="assets/welps/b_wurf_1.webp" height="450" width="450" alt="">
+      <img src="assets/welps/b_wurf_2.webp" height="450" width="450"  alt="">
+      <img src="assets/welps/b_wurf_3.webp" height="450" width="450"  alt="">
+    </div>
+  </section>
+
+  <h2>A Wurf</h2>
+  <section>
+    <div class="text-box --left">
+      <p>Geboren am 20.06.2020 
+        <br><br>
+        Mutter: Golden Dreamlines Josy    
+        <br><br>
+        Vater: Catch The Wind O Connor
+      </p>
+    </div>
+    <div class="welps">
+      <img src="assets/welps/a_wurf_1.webp" height="450" width="450"  alt="">
+      <img src="assets/welps/a_wurf_2.webp" height="450" width="450"  alt="">
+      <img src="assets/welps/a_wurf_3.webp" height="450" width="450"  alt="">
+    </div>
+  </section>
 
   <footer>
     <div>
       <span></span>
-      <a class="ghost-button">Impressum</a>
-      <a class="ghost-button">Datenschutz</a>
+      <a class="ghost-button" onclick="openModal(event)" >Impressum / Datenschut</a>
       <img src="/assets/icons/verein.webp" height="50">
     </div>
   </footer>
+
+  
+  <dialog id="modal">
+    <h1>Impressum!</h1>
+    <p>
+      Mechthild Hopp
+      <br>
+      Brückenstrasse 8
+      <br>
+      34369 Hofgeismar
+      <br><br>
+       
+      
+      <h3>Kontaktinformationen</h3>
+      <br>
+      Email: josy-2016@web.de
+      <br>
+      Telefon: 0163 6648704
+      <br><br>
+       
+      
+      <h3>Haftung für Inhalte</h3>
+      <br>
+      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+      <br><br>
+       
+      
+      <h3>Haftung für Links</h3>
+      <br>
+      Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+    <form method="dialog">
+      <button class="ghost-button --selected">Close</button>
+    </form>
+  </dialog>
+  
 </body>
 </html>
