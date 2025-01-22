@@ -246,3 +246,223 @@ dialog[open]::backdrop {
   background-color: rgb(0 0 0 / 50%);
 }
 
+@media (max-width: 768px) {
+  #header img {
+    width: 100px;
+    margin: .5rem;
+  }
+
+  .ghost-button {
+    padding: .5rem;
+    border-radius: 5px;
+  }
+  
+  .breadcrumbs {
+    top: 0;
+    right: -60dvw;
+    width: 50dvw;
+    height: 40dvh;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: .5rem;  
+    background-color: var(--block-color);
+    position: absolute;
+    border-bottom-left-radius: 10px;
+  
+    a{
+      border: solid 3px var(--background-color);
+      color: black;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+  
+  .open {
+    right: 0;
+  }
+}
+
+
+.--selected {
+  background-color: var(--background-color);
+  color: white;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 100% 0%;
+}
+
+section {
+  background-color: var(--section-color);
+  padding: 1.5rem;
+  
+  img {
+    margin: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.welps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  img:hover {
+    transform: scale(1.4);
+    position: relative;
+    box-shadow: 0px 20px 15px -15px rgba(0,0,0,0.5);
+  }
+}
+
+#welcome{
+  position: absolute;
+  top: 80vh;
+  left: 10vw;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem;
+  background-color: rgba(121, 149, 127, 0.6);
+
+  p {
+    padding: 0 1rem;
+  }
+}
+
+h2 {
+  justify-self: center;
+  color: white;
+  position: relative;
+}
+
+.argument {
+  margin-bottom: auto;
+
+  h2 {
+    color: black;
+    text-align: center;
+  }
+}
+
+.text-box{
+  background-color: var(--block-color);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: fit-content;
+  min-width: 402px;
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.2rem;
+}
+
+.--left {
+  margin-left: 5vw;
+}
+
+.breed {
+  padding: 2rem;
+}
+
+
+#contact {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: auto;
+  padding: 2rem;
+
+  div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 20% 60%;
+
+    p {
+      margin: auto 0;
+    } 
+
+    a {
+      margin: auto;
+    }
+  }
+}
+
+#jump {
+  position: absolute;
+  top: -11rem;
+}
+
+#map {
+  width: 100vw;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+#contact a img {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+
+  div {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 50% 25%;
+    grid-gap: 1rem;
+    padding: 1.5rem;
+
+    a {
+      text-align: center;
+      height: fit-content;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    margin: 0 auto auto auto;
+    padding-left: 3rem;
+  }
+}
+
+button {
+  focus: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+}
+
+dialog[open] {
+  background: var(--block-color);
+  border: none;
+  border-radius: 15px;
+  width: 80vw;
+
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 50%);
+}
+
