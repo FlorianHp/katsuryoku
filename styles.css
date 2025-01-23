@@ -47,7 +47,7 @@ body {
   }
 }
 
-#breadcrumbs {
+#nav {
   padding-right: 2rem;
   list-style-type: none;
   display: inline-grid;
@@ -73,7 +73,7 @@ body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  object-position: 100% 0%;
+  object-position: 100% 10%;
 }
 
 section {
@@ -175,9 +175,17 @@ section {
   }
 }
 
-h2 {
-  padding: 1rem;
+h1 {
+  font-size: 2rem;
+  width: fit-content;
   margin: auto;
+  color: white;
+  position: relative;
+}
+
+h2 {
+  
+  margin: 1rem;
   color: white;
   position: relative;
 }
@@ -341,7 +349,7 @@ dialog[open]::backdrop {
     border-radius: 5px;
   }
   
-  #breadcrumbs {
+  #nav {
     display: none;
     top: 0;
     padding-top: 1rem;

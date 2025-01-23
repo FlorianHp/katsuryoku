@@ -1,6 +1,6 @@
-const modal      = document.getElementById('modal');
-const menu       = document.getElementById('breadcrumbs');
-const burgerMenu = document.getElementById('menu');
+const modal = document.getElementById('modal');
+const nav   = document.getElementById('nav');
+const menu  = document.getElementById('menu');
 
 const openModal = () => {
   modal.showModal();
@@ -12,36 +12,36 @@ const closeModal = () => {
 
 const handleClickOutside = (e) => {
 
-  if (!menu.contains(e.target) && e.target !== burgerMenu) {
-    menu.classList.remove('open');
+  if (!nav.contains(e.target) && e.target !== menu) {
+    nav.classList.remove('open');
     window.removeEventListener('click', handleClickOutside);
   }
 };
 
-const openMenu = () => {
-  menu.classList.add('open');
+const opennav = () => {
+  nav.classList.add('open');
   console.log('OPEN GESETZT🐒')
   setTimeout(() => {
     window.addEventListener('click', handleClickOutside)
   },500 );
 };
 
-const closeMenu = () => {
-  menu.classList.remove('open');
+const closenav = () => {
+  nav.classList.remove('open');
   console.log('OPEN ENTFERNT')
   window.removeEventListener('click', handleClickOutside);
   
 };
 
-const toggleMenu = (e) => {
+const togglenav = (e) => {
  /*  e.stopPropagation(); */
-  if (menu.classList.contains('open')) {
-    closeMenu();
+  if (nav.classList.contains('open')) {
+    closenav();
   } else {
-    openMenu();
+    opennav();
   }
 };
 
-if (burgerMenu) { 
-  burgerMenu.addEventListener('click', toggleMenu);
+if (menu) { 
+  menu.addEventListener('click', togglenav);
 }
